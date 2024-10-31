@@ -1,0 +1,9 @@
+
+.PHONY: build
+build:
+	@docker buildx build \
+		--target release \
+		--platform linux/amd64 \
+		--file Dockerfile \
+		--progress plain \
+		.
